@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+.main
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .body
+    {
+        
+        height: 450px;
+        width: 800px;
+        border-radius: 20px;
+        border: 2px solid;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        button
+        {
+            width: 200px;
+            height: 40px;
+            position: relative;
+            top: 150px;
+            border-radius: 10px;
+            
+        }
+    }
 }
+.main1
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .body1
+    {
+        
+        height: 78dvh;
+        width: 75dvw;
+        border-radius: 20px;
+        border: 2px solid;
+        display: flex;
+        flex-direction: row;
+        .player1
+        {
+            height: 100%;
+            width: 50%;
+            border: 2px solid;
+            border-radius: 20px;
+            background-color: brown;
+            .top1
+            {
+                height: 20%;
+                width: 100%;
+                border: 2px solid;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .userdetail
+                {
+                    width: 90px;
+                    height: 90px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    margin-left: 20px;
+                    animation: shake 1s infinite alternate;
+                }
+                .performance
+                {
+                    width: 170px;
+                    height: 50px;
+                    margin-right: 20px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    animation: per2 1s infinite alternate;
+                    .power
+                    {
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .bottom1
+            {
+                height: 79%;
+                width: 100%;
+                border: 2px solid;
+                border-radius: 20px;
+                .hand{
+                    width: 400px;
+                    height: 200px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    margin-top: 100px;
+                    
+                }
+                .select
+                {
+                    width: 60px;
+                    height: 60px;
+                    border: 2px solid;
+                    border-radius: 10px;
+                    margin-right: 70px;
+                    margin-top: 30px;
+                    position: relative;
+                    left: 410px;
+                    background-color: rgb(234, 232, 232);
+                    
+                }
+            }
+        }
+        .player2
+        {
+            height: 100%;
+            width: 50%;
+            border: 2px solid;
+            border-radius: 20px;
+            background-color: aquamarine;
+            .top2
+            {
+                height: 20%;
+                width: 100%;
+                border: 2px solid;
+                border-radius: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .userdetail
+                {
+                    width: 90px;
+                    height: 90px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    margin-right: 20px;
+                    animation: shake2 1s infinite alternate;
+                }
+                .performance
+                {
+                    width: 170px;
+                    height: 50px;
+                    margin-left: 20px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    animation: per2 1s infinite alternate;
+                    .power
+                    {
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .bottom2
+            {
+                height: 79%;
+                width: 100%;
+                border: 2px solid;
+                border-radius: 20px;
+                .hand{
+                    width: 400px;
+                    height: 200px;
+                    border: 2px solid;
+                    border-radius: 20px;
+                    margin-left: 173px;
+                    margin-top: 100px;
+                    overflow: hidden;
+                    animation: hand2 0.5s ease-in-out 5 ;
+                }
+                
+            }
+        }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    }
+    
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes shake {
+    
+    0% { transform: translate(5px, 5px); }
+   
+    100% { transform: translate(-5px, -5px); }
+    
+}
+@keyframes shake2 {
+    
+    0% { transform: translate(5px, -5px); }
+   
+    100% { transform: translate(-5px, 5px); }
+    
+}
+@keyframes per2 {
+    
+    0% { transform: translate(5px, 0); }
+   
+    100% { transform: translate(-5px, 0); }
+    
+}
+@keyframes per1 {
+    
+    0% { transform: translate(-5px, 0); }
+   
+    100% { transform: translate(5px, 0); }
+    
+}
+@keyframes hand2 {
+    0% { transform: rotate(0deg) translate(0, 0); }
+    25% { transform: rotate(-10deg) translate(-5px, -5px); }
+    50% { transform: rotate(10deg) translate(5px, 5px); }
+    75% { transform: rotate(-10deg) translate(-5px, 5px); }
+    100% { transform: rotate(10deg) translate(5px, -5px); }
+}
+@keyframes shakeWave {
+    0% { transform: rotate(0deg) translate(0, 0); }
+    25% { transform: rotate(-10deg) translate(-5px, -5px); }
+    50% { transform: rotate(10deg) translate(5px, 5px); }
+    75% { transform: rotate(-10deg) translate(-5px, 5px); }
+    100% { transform: rotate(10deg) translate(5px, -5px); }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .shake-wave {
+    animation: shakeWave 0.5s ease-in-out;
   }
-  to {
-    transform: rotate(360deg);
+  .winner
+  {
+    
   }
-}
